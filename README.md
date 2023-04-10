@@ -1,3 +1,5 @@
+## LIVE DEMO :- <a href="https://prashanth-m-stopwatch.netlify.app//">Stop Watch</a>
+
 In this project, let's build a **Stopwatch** by applying the concepts we have learned till now.
 
 ### Refer to the image below:
@@ -68,16 +70,17 @@ Use these files to complete the implementation:
 - You can use `Math.floor()` function that returns the **largest integer less than or equal to a given number**
 
   ```js
-  console.log(Math.floor(5.95)); // output: 5
+  console.log(Math.floor(5.95)) // output: 5
   ```
-</details>
+
+  </details>
 
 ### Resources
 
 <details>
 <summary>Image URLs</summary>
 
-- [https://assets.ccbp.in/frontend/react-js/stopwatch-timer.png](https://assets.ccbp.in/frontend/react-js/stopwatch-timer.png) alt should be **stopwatch** 
+- [https://assets.ccbp.in/frontend/react-js/stopwatch-timer.png](https://assets.ccbp.in/frontend/react-js/stopwatch-timer.png) alt should be **stopwatch**
 - [https://assets.ccbp.in/frontend/react-js/stopwatch-sm-bg.png](https://assets.ccbp.in/frontend/react-js/stopwatch-sm-bg.png)
 - [https://assets.ccbp.in/frontend/react-js/stopwatch-lg-bg.png](https://assets.ccbp.in/frontend/react-js/stopwatch-lg-bg.png)
 </details>
