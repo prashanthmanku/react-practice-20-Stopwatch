@@ -3,7 +3,11 @@ import {Component} from 'react'
 import './index.css'
 
 class Stopwatch extends Component {
-  state = {currentRunningSeconds: 0}
+  state = {currentRunningSeconds: 0, isTimerRunning: false}
+
+  componentWillUnmount() {
+    this.clearTimer()
+  }
 
   clearTimer = () => {
     clearInterval(this.intervalID)
@@ -16,16 +20,17 @@ class Stopwatch extends Component {
   }
 
   StartTimer = () => {
-    this.clearTimer()
     this.intervalID = setInterval(this.countingTime, 1000)
+    this.setState({isTimerRunning: true})
   }
 
   stopTimer = () => {
     this.clearTimer()
+    this.setState({isTimerRunning: false})
   }
 
   resetTimer = () => {
-    this.setState({currentRunningSeconds: 0})
+    this.setState({currentRunningSeconds: 0, isTimerRunning: false})
     this.clearTimer()
   }
 
@@ -39,6 +44,7 @@ class Stopwatch extends Component {
   }
 
   render() {
+    const {isTimerRunning} = this.state
     return (
       <div className="app-container">
         <div className="bg-container">
@@ -58,6 +64,7 @@ class Stopwatch extends Component {
                 type="button"
                 className="start-button-bg"
                 onClick={this.StartTimer}
+                disabled={isTimerRunning}
               >
                 Start
               </button>
